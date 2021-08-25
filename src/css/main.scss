@@ -1,4 +1,11 @@
+// Mis Fuentes
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,&display=swap');
+
 // Mis Propios Estilos
+html {
+  box-sizing: border-box;
+}
+
 .hero-heading {
   @apply text-4xl mb-10 text-white font-medium;
 }

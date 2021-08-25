@@ -12,8 +12,9 @@ module.exports = {
     extend: {
       // Fuentes 
       fontFamily: {
-        sans: ['Ubuntu', 'sans-serif'],
-        serif: ['serif'],
+        montserrat: ['montserrat', 'sans-serif'],
+        sans: ['Avenir', 'sans-serif'], // Probar con Avenir/Ubuntu
+        serif: ['Merriweather', 'serif'],
       },
 
       // Colores
@@ -31,7 +32,7 @@ module.exports = {
         'subtitle-light': '#4a4a4a',
         'text-light': '#111827',
 
-        'title-dark': '#f7f7f7',
+        'title-dark': '##f7f7f7',
         'subtitle-dark': '#93C5FD',
         'text-dark': '#F9FAFB',
 
