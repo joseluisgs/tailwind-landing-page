@@ -4,6 +4,7 @@
   "description": "Ejemplo de página de inicio de productos con Tailwind, Sass y Gulp",
   "main": "gulpfile.js",
   "dependencies": {
+    "@tailwindcss/forms": "^0.3.3",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.9",
     "tailwindcss": "^2.2.7"
