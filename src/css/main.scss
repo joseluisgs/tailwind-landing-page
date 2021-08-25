@@ -4,6 +4,8 @@
 // Mis Propios Estilos
 html {
   box-sizing: border-box;
+  overflow: scroll; // Saco la barra de scroll
+  overflow-x: hidden; // Escondo la barra horizontal
 }
 
 .hero-heading {

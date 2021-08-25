@@ -19,7 +19,41 @@
 
 </head>
 
-<body class="bg-gray-200 dark:bg-gray-500">
+<body class="bg-primary-light dark:bg-primary-dark">
+     <!-- ENCABEZADO -->
+    <header class="justify-between p-4 mx-auto bg-blue-900 desktop:flex text-primary-light">
+        <div class="text-left tablet:w-1/3 hover:cursor-pointer">
+            <div class="inline-flex items-center">
+            <span class="mr-1 iconify" data-icon="ic:round-email"></span>
+            email@tu-email.com      
+        </div>
+        </div>
+        <div class="tablet:w-1/3 desktop:text-center hover:cursor-pointer">
+            <div class="inline-flex items-center ">
+            <span class="mr-1 iconify" data-icon="fa-solid:phone-alt"></span>
+            +69 69 69 69
+        </div>
+        </div>
+                <div class="tablet:text-left tablet:w-1/6 hover:cursor-pointer desktop:text-right">
+                    <div class="inline-flex items-center ">
+            <span class="mr-1 iconify" data-icon="fa-solid:headphones"></span>
+                    Soporte
+                </div>
+                </div>
+                <div class="tablet:text-right tablet:w-1/6">
+                     <div class="inline-flex items-center">
+                        <span class="mr-1 iconify" data-icon="mdi:theme-light-dark"></span>
+                        <label for="temaCheckbox">
+                            <input type="checkbox" id="temaCheckbox" class="appearance-none checked:bg-blue-200 checked:border-transparent">
+                            Dark Mode
+                        </label>
+                </div>
+            </div>
+   </header>
+    
+    
+    
+    
     <header class="p-20 text-center bg-gradient-to-r from-blue-400 via-blue-500 to-green-500">
         <h1 class="font-montserrat hero-heading">Gulp con TailwindCSS Kit</h1>
         <p class="w-full mb-10 text-xl leading-5 text-center text-white">Tailwind 2
