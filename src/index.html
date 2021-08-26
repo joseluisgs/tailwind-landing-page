@@ -19,7 +19,7 @@
 
   <body class="transition-all duration-300 bg-primary-light dark:bg-primary-dark" onload="initTheme()">
     <!-- ENCABEZADO -->
-    <header class="justify-between p-4 mx-auto bg-blue-900 tablet:flex text-primary-light">
+    <header class="justify-between p-4 mx-auto bg-blue-900 tablet:flex text-primary-light font-montserrat">
       <div class="text-left tablet:w-1/3 hover:cursor-pointer">
         <div class="inline-flex items-center">
           <span class="mr-1 iconify" data-icon="ic:round-email"></span>
@@ -53,9 +53,8 @@
 
     <!-- HERO -->
     <div id="hero" class="h-screen tablet:py-8 desktop:px-20 tablet:px-8">
-        
       <!-- NAVBAR -->
-      <nav>
+      <nav class="font-montserrat">
         <div class="px-4">
           <div class="flex justify-between mobile:flex mobile:justify-between mobile:items-center">
             <div class="flex space-x-7">
@@ -68,16 +67,22 @@
               </div>
               <!-- Elementos principales del menú a la izquierda -->
               <div class="items-center hidden space-x-1 tablet:flex">
-                <a href="#" class="px-2 py-2 border-b border-ternary-light text-primary-light">Inicio</a>
-                <a href="#" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light">Servicios</a>
-                <a href="#" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light">Proyectos</a>
-                <a href="#" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light">Contacto</a>
+                <a href="index.html" class="px-2 py-2 font-semibold border-b border-ternary-light text-primary-light">Inicio</a>
+                <a href="" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold">Servicios</a>
+                <a href="" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold">Proyectos</a>
+                <a href="" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold">Contacto</a>
               </div>
             </div>
             <!-- Secondary Navbar items -->
             <div class="items-center hidden space-x-3 md:flex">
-              <a href="" class="px-2 py-2 text-gray-300 transition duration-300 rounded hover:bg-blue-400 hover:text-secondary-light">Registro</a>
-              <a href="" class="px-2 py-2 transition duration-300 bg-yellow-300 rounded text-primary-dark hover:bg-yellow-400">Entrar</a>
+              <a
+                href=""
+                class="px-2 py-2 text-gray-300 transition duration-300 rounded hover:bg-blue-400 hover:text-secondary-light focus:shadow-outline"
+                >Registro</a
+              >
+              <a href="" class="px-2 py-2 transition duration-300 bg-yellow-300 rounded text-primary-dark hover:bg-yellow-400 focus:shadow-outline"
+                >Entrar</a
+              >
             </div>
 
             <!-- Mobile menu button -->
@@ -102,10 +107,10 @@
         <!-- mobile menu -->
         <div class="hidden mobile-menu">
           <ul class="">
-            <li class="active"><a href="index.html" class="block px-2 py-4 text-sm bg-blue-500 text-primary-light">Inicio</a></li>
-            <li><a href="#" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light">Servicios</a></li>
-            <li><a href="#" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light">Proyectos</a></li>
-            <li><a href="#" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light">Contacto</a></li>
+            <li class="active"><a href="index.html" class="block px-2 py-4 text-sm font-semibold bg-blue-500 text-primary-light">Inicio</a></li>
+            <li><a href="" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light">Servicios</a></li>
+            <li><a href="" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light">Proyectos</a></li>
+            <li><a href="" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light">Contacto</a></li>
           </ul>
         </div>
       </nav>

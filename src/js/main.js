@@ -40,7 +40,7 @@ function setTheme(newTheme) {
     document.querySelector('#theme-switch').style.color = 'rgba(252, 211, 77, 1)';
   } else {
     document.querySelector('html').classList.add('dark');
-    document.querySelector('#theme-switch').style.color = 'rgba(165, 180, 252, 1)';
+    document.querySelector('#theme-switch').style.color = 'rgba(200, 200, 250, 1)';
   }
 };
 
