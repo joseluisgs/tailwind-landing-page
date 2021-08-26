@@ -17,3 +17,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+// TEMA
+
+function initTheme() {
+  // Existe ya un tema en store?
+  const cachedTheme = localStorage.theme ? localStorage.theme : false;
+  // tenemos un tema en el sistema operativo o explorador
+  const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (cachedTheme) setTheme(cachedTheme);
+  else if (userPrefersDark) setTheme('dark');
+  else setTheme('light');
+  console.log('Store init Theme', currentTheme);
+};
+
+function setTheme(newTheme) {
+  currentTheme = newTheme;
+  console.log(`Store set Theme to: ${newTheme}`);
+  localStorage.setItem('theme', newTheme);
+  if (currentTheme === 'light') {
+    document.querySelector('html').classList.remove('dark');
+    document.querySelector('#theme-switch').style.color = 'rgba(252, 211, 77, 1)';
+  } else {
+    document.querySelector('html').classList.add('dark');
+    document.querySelector('#theme-switch').style.color = 'rgba(165, 180, 252, 1)';
+  }
+};
+
+function changeTheme() {
+  if (currentTheme === 'light') setTheme('dark');
+  else setTheme('light');
+};
