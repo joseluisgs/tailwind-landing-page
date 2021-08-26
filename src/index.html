@@ -68,7 +68,9 @@
               <!-- Elementos principales del menú a la izquierda -->
               <div class="items-center hidden space-x-1 tablet:flex">
                 <a href="index.html" class="px-2 py-2 font-semibold border-b border-ternary-light text-primary-light">Inicio</a>
-                <a href="" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold">Servicios</a>
+                <a href="#services" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold"
+                  >Servicios</a
+                >
                 <a href="" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold">Proyectos</a>
                 <a href="" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold">Contacto</a>
               </div>
@@ -108,7 +110,7 @@
         <div class="hidden mobile-menu">
           <ul class="">
             <li class="active"><a href="index.html" class="block px-2 py-4 text-sm font-semibold bg-blue-500 text-primary-light">Inicio</a></li>
-            <li><a href="" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light">Servicios</a></li>
+            <li><a href="#services" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light">Servicios</a></li>
             <li><a href="" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light">Proyectos</a></li>
             <li><a href="" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light">Contacto</a></li>
           </ul>
@@ -127,10 +129,12 @@
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae at natus dicta tempora? Distinctio vero aut, eveniet perferendis maiores
             corporis.
           </p>
-          <button class="px-2 py-2 mt-4 transition duration-300 bg-yellow-300 rounded text-primary-dark hover:bg-yellow-400 focus:shadow-outline">Conócenos</button>
+          <button class="px-2 py-2 mt-4 transition duration-300 bg-yellow-300 rounded text-primary-dark hover:bg-yellow-400 focus:shadow-outline">
+            Conócenos
+          </button>
         </div>
-        <div class="py-2 mt6 tablet:px-6 tablet:w-2/3 tablet:flex tablet:justify-center">
-          <img src="../img/hero-image.png" alt="hero image" class="tablet:w-2/3" />
+        <div class="flex justify-center py-2 mt6 tablet:px-6 tablet:w-2/3">
+          <img src="../img/hero-image.png" alt="hero image" class="tablet:max-h-full tablet:w-2/3 max-h-64" />
         </div>
       </div>
       <!-- BANNER ! -->
@@ -138,7 +142,12 @@
     <!-- HERO ! -->
 
     <!-- CONTENIDO -->
-
+    <section id="services" class="h-screen p-4 my-8 desktop:px-20">
+      <div class="text-center text-primary-dark dark:text-primary-light">
+        <h1 class="text-4xl font-semibold font-montserrat">Desarrollo de web apps a medida</h1>
+        <h2 class="py-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis</h2>
+      </div>
+    </section>
     <!-- CONTENIDO ! -->
 
     <!-- SCRIPTS Y LIBRERÍAS -->
