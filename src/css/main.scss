@@ -9,6 +9,12 @@ html {
   width: 100%;
 }
 
+#hero {
+  background: url('../img/hero-bg.jpg');
+  background-position-x: center;
+  background-size: cover;
+}
+
 .hero-heading {
   @apply text-4xl mb-10 text-white font-medium;
 }
