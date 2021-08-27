@@ -14,6 +14,7 @@ Ejemplo de como crear una página de una compañía usando [TailwindCSS](https:/
 
 - [Tailwind - Landing Page](#tailwind---landing-page)
   - [Acerca de](#acerca-de)
+    - [Clases utilidad](#clases-utilidad)
   - [Uso](#uso)
   - [Autor](#autor)
     - [Contacto](#contacto)
@@ -27,6 +28,10 @@ Pagina web de una compañía realizada con [TailwindCSS](https://tailwindcss.com
 Para este proyecto me he basado en otro desarrollo realizado donde el framework CSS es Bulma y con ello poder comprar ambos. Lo puedes encontrar en: [Bulma - Landing Page](https://github.com/joseluisgs/bulma-landing-page).
 
 Se ha utilizado nuestra plantilla de automatización de Tailwind que puedes descargar desde: [Tailwind - Init Gulp](https://github.com/joseluisgs/tailwind-init-gulp).
+
+### Clases utilidad
+Se podría haber simplificado el código de nuestro HTML extrayendo clases de utilidad y creando las propias nuestras. No se descarta en posteriores versiones. Pero creo que para el aprendizaje es mejor ver todas las clases que se han utilizado de Talwind.
+
 
 ## Uso
 
