@@ -9,16 +9,24 @@ addBackToTop({
 
 // TRANSICIONES
 // en todos los href le apliacmos el estilo smooth
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//   anchor.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     document.querySelector(this.getAttribute('href')).scrollIntoView({
+//       behavior: 'smooth'
+//     });
+//   });
+// });
 
 // TEMA
+
+// Iniciamos el tema
+const body = document.body;
+body.onload = initTheme;
+
+// Evento al pulsar el toggle
+const toggle = document.querySelector(".theme-toggle");
+toggle.addEventListener('click', changeTheme);
 
 function initTheme() {
   // Existe ya un tema en store?
@@ -52,7 +60,20 @@ function changeTheme() {
 // NAVBAR PLUGIN
 const btn = document.querySelector("button.mobile-menu-button");
 const menu = document.querySelector(".mobile-menu");
+const menuLinks = document.querySelectorAll(".mobile-menu-link");
+
 
 btn.addEventListener("click", () => {
-  menu.classList.toggle("hidden");
+  toggleMenu();
 });
+
+// Cerramos al pulsar todos los links del menú móvil
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    toggleMenu();
+  });
+});
+
+function toggleMenu() {
+  menu.classList.toggle("hidden");
+}

@@ -7,6 +7,7 @@ html {
   overflow: scroll; // Saco la barra de scroll
   overflow-x: hidden; // Escondo la barra horizontal
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 #hero {
