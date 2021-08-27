@@ -47,7 +47,7 @@
     <!-- ENCABEZADO ! -->
 
     <!-- HERO -->
-    <section id="hero" class="container h-screen tablet:py-8 desktop:px-20 tablet:px-8">
+    <section id="hero" class="container desktop:h-screen tablet:py-8 desktop:px-20 tablet:px-8 tablet:pb-52">
       <!-- NAVBAR -->
       <nav class="font-montserrat">
         <div class="px-4">
@@ -66,7 +66,9 @@
                 <a href="#services" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold"
                   >Servicios</a
                 >
-                <a href="#projects" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold">Proyectos</a>
+                <a href="#projects" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold"
+                  >Proyectos</a
+                >
                 <a href="" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold">Contacto</a>
               </div>
             </div>
@@ -113,7 +115,9 @@
               >
             </li>
             <li>
-              <a href="#projects" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light mobile-menu-link">Proyectos</a>
+              <a href="#projects" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light mobile-menu-link"
+                >Proyectos</a
+              >
             </li>
             <li>
               <a href="" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light mobile-menu-link">Contacto</a>
@@ -531,6 +535,35 @@
       <div class="text-center">
         <h1 class="text-4xl font-semibold font-montserrat text-primary-dark dark:text-primary-light">Proyectos realizados</h1>
         <h2 class="py-2 text-secondary-dark dark:text-secondary-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis</h2>
+      </div>
+      <!-- Slider -->
+      <div class="mt-4 blog-slider__container">
+        <div class="shadow-sd blogSlides fade">
+          <div class="blog-slider__numbertext text-secondary-dark">1 / 3</div>
+          <img src="../img/project01.png" />
+          <div class="font-semibold text-gray-600 bg-white blog-slider__text font-montserrat">Coder Web</div>
+        </div>
+
+        <div class="blogSlides fade">
+          <div class="blog-slider__numbertext text-secondary-dark">2 / 3</div>
+          <img src="../img/project02.png" />
+          <div class="font-semibold text-gray-600 bg-white blog-slider__text font-montserrat">Any Face</div>
+        </div>
+
+         <div class="blogSlides fade">
+          <div class="blog-slider__numbertext text-secondary-dark">3 / 3</div>
+          <img src="../img/project03.jpeg" />
+          <div class="font-semibold text-gray-600 bg-white blog-slider__text font-montserrat">F0lio</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+      <div class="blogSlider__dots" style="text-align: center">
+        <span class="blogSlider__dots--dot" onclick="currentSlide(1)"></span>
+        <span class="blogSlider__dots--dot" onclick="currentSlide(2)"></span>
+        <span class="blogSlider__dots--dot" onclick="currentSlide(3)"></span>
       </div>
     </section>
     <!-- PROYECTOS ! -->
