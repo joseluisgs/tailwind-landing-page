@@ -35,14 +35,14 @@ Se ha utilizado nuestra plantilla de automatización de Tailwind que puedes desc
 Además el proyecto tiene el tema claro u oscuro, que detecta automáticamente la configuración de tu sistema operativo o preferencias de explorador o opciones personales que le indiques, para que puedas cambiar el tema de tu página web. De la misma manera, se adapta a tres configuraciones mínimas de dispositivo: teléfono móvil, tablet y ordenador.
 
 ### Modo claro
-<img src="./images/desktop-light.jpg" height="400"/>
-<img src="./images/tablet-light.jpg" height="400"/>
-<img src="./images/mobile-light.jpg" height="400"/>
+<img src="./images/desktop-light.jpg" height="800"/>
+<img src="./images/tablet-light.jpg" height="800"/>
+<img src="./images/mobile-light.jpg" height="800"/>
 
 ### Modo oscuro
-<img src="./images/desktop-dark.jpg" height="400"/>
-<img src="./images/tablet-dark.jpg" height="400"/>
-<img src="./images/mobile-dark.jpg" height="400"/>
+<img src="./images/desktop-dark.jpg" height="800"/>
+<img src="./images/tablet-dark.jpg" height="800"/>
+<img src="./images/mobile-dark.jpg" height="800"/>
 
 ## Tailwind CSS
 [Tailwind CSS](https://tailwindcss.com/) es un framework CSS de bajo nivel altamente personalizable que le permite crear diseños personalizados. Permite un desarrollo ágil, basado en clases de utilidad que se pueden aplicar con facilidad en el código HTML y unos flujos de desarrollo que permiten optimizar mucho el peso del código CSS.
