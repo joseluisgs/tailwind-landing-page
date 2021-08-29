@@ -12,6 +12,11 @@ html {
 
 header {
   background: #051b4d;
+  @apply justify-between p-4 mx-auto tablet:flex text-primary-light font-montserrat;
+
+  &header__item {
+    @apply text-left tablet:w-1/3 hover:cursor-pointer;
+  }
 }
 
 // Sección de Hero
