@@ -10,6 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
+header {
+  background: #051b4d;
+}
+
 // Sección de Hero
 #hero {
   background: url('../img/hero-bg.jpg');
@@ -19,6 +23,7 @@ html {
 
 #contact {
   background: url('../img/contact-bg.jpg');
+  background-position-x: center;
   background-size: cover;
 }
 
