@@ -14,6 +14,9 @@ Ejemplo de como crear una página de una compañía usando [TailwindCSS](https:/
 
 - [Tailwind - Landing Page](#tailwind---landing-page)
   - [Acerca de](#acerca-de)
+    - [Modo claro](#modo-claro)
+    - [Modo oscuro](#modo-oscuro)
+  - [Tailwind CSS](#tailwind-css)
     - [Clases utilidad](#clases-utilidad)
   - [Uso](#uso)
   - [Autor](#autor)
@@ -29,8 +32,24 @@ Para este proyecto me he basado en otro desarrollo realizado donde el framework 
 
 Se ha utilizado nuestra plantilla de automatización de Tailwind que puedes descargar desde: [Tailwind - Init Gulp](https://github.com/joseluisgs/tailwind-init-gulp).
 
+Además el proyecto tiene el tema claro u oscuro, que detecta automáticamente la configuración de tu sistema operativo o preferencias de explorador o opciones personales que le indiques, para que puedas cambiar el tema de tu página web. De la misma manera, se adapta a tres configuraciones mínimas de dispositivo: teléfono móvil, tablet y ordenador.
+
+### Modo claro
+<img src="./images/desktop-light.jpg" height="800"/>
+<img src="./images/tablet-light.jpg" height="800"/>
+<img src="./images/mobile-light.jpg" height="800"/>
+
+### Modo oscuro
+<img src="./images/desktop-dark.jpg" height="800"/>
+<img src="./images/tablet-dark.jpg" height="800"/>
+<img src="./images/mobile-dark.jpg" height="800"/>
+
+## Tailwind CSS
+[Tailwind CSS](https://tailwindcss.com/) es un framework CSS de bajo nivel altamente personalizable que le permite crear diseños personalizados. Permite un desarrollo ágil, basado en clases de utilidad que se pueden aplicar con facilidad en el código HTML y unos flujos de desarrollo que permiten optimizar mucho el peso del código CSS.
+
+
 ### Clases utilidad
-Se podría haber simplificado el código de nuestro HTML extrayendo clases de utilidad y creando las propias nuestras. No se descarta en posteriores versiones. Pero creo que para el aprendizaje es mejor ver todas las clases que se han utilizado de Talwind.
+Tailwind permite escribir los estilos por medio de clases que se incluyen dentro del código HTML y que afectan a un aspecto muy concreto y específico de las CSS, por ejemplo, el fondo de un elemento, el color del texto o simplemente el margen por la parte de arriba. Este enfoque se conoce como "Atomic CSS", por aplicarse mediante estilos muy determinados y simples. 
 
 
 ## Uso
