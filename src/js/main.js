@@ -60,7 +60,7 @@ function changeTheme() {
 // NAVBAR PLUGIN
 const btn = document.querySelector("button.mobile-menu-button");
 const menu = document.querySelector(".mobile-menu");
-const menuLinks = document.querySelectorAll(".mobile-menu-link");
+const menuLinks = document.querySelectorAll(".mobile-menu-click");
 
 
 btn.addEventListener("click", () => {
