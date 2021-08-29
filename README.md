@@ -18,6 +18,7 @@ Ejemplo de como crear una página de una compañía usando [TailwindCSS](https:/
     - [Modo oscuro](#modo-oscuro)
   - [Tailwind CSS](#tailwind-css)
     - [Clases utilidad](#clases-utilidad)
+    - [Tema personalizado](#tema-personalizado)
   - [Uso](#uso)
   - [Autor](#autor)
     - [Contacto](#contacto)
@@ -49,7 +50,66 @@ Además el proyecto tiene el tema claro u oscuro, que detecta automáticamente l
 
 
 ### Clases utilidad
-Tailwind permite escribir los estilos por medio de clases que se incluyen dentro del código HTML y que afectan a un aspecto muy concreto y específico de las CSS, por ejemplo, el fondo de un elemento, el color del texto o simplemente el margen por la parte de arriba. Este enfoque se conoce como "Atomic CSS", por aplicarse mediante estilos muy determinados y simples. 
+Tailwind permite escribir los estilos por medio de clases que se incluyen dentro del código HTML y que afectan a un aspecto muy concreto y específico de las CSS, por ejemplo, el fondo de un elemento, el color del texto o simplemente el margen por la parte de arriba. Este enfoque se conoce como "Atomic CSS", por aplicarse mediante estilos muy determinados y simples.
+
+### Tema personalizado
+En el fichero tailwind.config.js se puede definir un [tema personalizado](https://tailwindcss.com/docs/theme), que se aplica a todas las páginas web. Se muestra un ejemplo donde se han definido fuentes, colores e incluso resolución para los breakpoints y adaptación a los dispositivos.
+
+```js
+ darkMode: 'class', // or 'media' or 'class'
+
+  // Extendemos o configuramos el tema
+  theme: {
+    extend: {
+      // Fuentes 
+      fontFamily: {
+        montserrat: ['montserrat', 'sans-serif'],
+        sans: ['Avenir', 'sans-serif'], // Probar con Avenir/Ubuntu
+        serif: ['Merriweather', 'serif'],
+      },
+
+      // Colores
+      colors: {
+        // O puedo usar colors.
+        'primary-light': '#F7F8FC',
+        'secondary-light': '#f7f7f7',
+        'ternary-light': '#f6f7f8',
+
+        'primary-dark': '#0D2438',
+        'secondary-dark': '#102D44',
+        'ternary-dark': '#1E3851',
+
+        'title-light': '#363636',
+        'subtitle-light': '#4a4a4a',
+        'text-light': '#111827',
+
+        'title-dark': '##f7f7f7',
+        'subtitle-dark': '#93C5FD',
+        'text-dark': '#F9FAFB',
+
+      },
+
+      // Adaptación a dispositivos. Me baso en los de Bula y TailwindCSS
+      // https://tailwindcss.com/docs/responsive-design
+      // https://bulma.io/documentation/overview/responsiveness/
+      screens: {
+        'mobile': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'tablet': '768px',
+        // => @media (min-width: 768px) { ... }
+
+        'desktop': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'widescreen': '1280px',
+        // => @media (min-width: 1280px) { ... }
+
+        'fullhd': '1408px',
+        // => @media (min-width: 1408px) { ... }
+      }
+    },
+```
 
 
 ## Uso
