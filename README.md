@@ -19,6 +19,8 @@ Ejemplo de como crear una página de una compañía usando [TailwindCSS](https:/
   - [Tailwind CSS](#tailwind-css)
     - [Clases utilidad](#clases-utilidad)
     - [Tema personalizado](#tema-personalizado)
+  - [BEM CSS](#bem-css)
+    - [BEM y Sass](#bem-y-sass)
   - [Uso](#uso)
   - [Autor](#autor)
     - [Contacto](#contacto)
@@ -110,7 +112,39 @@ En el fichero tailwind.config.js se puede definir un [tema personalizado](https:
       }
     },
 ```
-
+## BEM CSS
+[BEM](http://getbem.com/introduction/) nos da la directriz de cómo estructurar nuestro CSS y cómo nombrar adecuadamente a las clases CSS. BEM significa: Block Element Modifier.
+- Este bloque no depende de ningún otro elemento. Se puede poner en cualquier parte de la página y no cambia en nada. Para el bloque solo lo escribimos como si fuera una clase normal.
+```css
+.bloque{
+  margin:0 auto;
+}
+```
+- El elemento sí depende del bloque en el que se inserte. Esto significa que por sí solo, el elemento no tiene un significado particular. El elemento tiene que ser parte de un bloque. Entonces usamos doble guión bajo “__” para separar el nombre del bloque del elemento
+```css
+.bloque__boton{
+  border: 1px solid black;
+}
+```
+- Modifier sería reglas particulares de cada elemento. Los modificadores, son parte del elemento (y del bloque), por lo que para separar el modificador del elemento se usa el doble guión corto “ — ”. Para el ejemplo de los botones de arriba, seria algo asi.
+```css
+.bloque__boton--rojo{
+  background:red;
+}
+```
+### BEM y Sass
+Usaremos anidación y selectores padres.
+```css
+.bloque{
+    margin:0 auto;
+    &__boton{
+        border: 1px solid black;
+        &--rojo{
+             background:red;
+        }
+    }
+}
+```
 
 ## Uso
 
