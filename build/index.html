@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>TailwindCSS Landing</title>
+
+    <meta name="description" content="Plantilla de Gulp con Tailwind CSS" />
+    <meta name="author" content="José Luis González Sánchez" />
+    <meta name="keywords" content="CSS, Tailwind, web, Gulp, landing" />
+
+    <link rel="icon" type="image/svg" href="./img/icon.svg" />
+
+    <!-- MIS ESTILOS -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+
+  <body class="transition-all duration-300 bg-primary-light dark:bg-primary-dark">
+    <!-- ENCABEZADO -->
+    <header class="justify-between p-4 mx-auto tablet:flex text-primary-light font-montserrat">
+      <div class="text-left tablet:w-1/3 hover:cursor-pointer">
+        <div class="inline-flex items-center">
+          <span class="mr-1 iconify" data-icon="ic:round-email"></span>
+          email@tu-email.com
+        </div>
+      </div>
+      <div class="tablet:w-1/3 tablet:text-center hover:cursor-pointer">
+        <div class="inline-flex items-center">
+          <span class="mr-1 iconify" data-icon="fa-solid:phone-alt"></span>
+          +69 69 69 69
+        </div>
+      </div>
+      <div class="text-left tablet:w-1/6 hover:cursor-pointer tablet:text-right">
+        <div class="inline-flex items-center">
+          <span class="mr-1 iconify" data-icon="fa-solid:headphones"></span>
+          Soporte
+        </div>
+      </div>
+      <div class="text-left tablet:text-right tablet:w-1/6">
+        <div class="inline-flex items-center theme-toggle">
+          <span id="theme-switch" class="text-2xl iconify hover:text-blue-200 hover:cursor-pointer" data-icon="mdi:theme-light-dark"></span>
+        </div>
+      </div>
+    </header>
+    <!-- ENCABEZADO ! -->
+
+    <!-- HERO -->
+    <section id="hero" class="desktop:h-full tablet:py-8 desktop:px-20 tablet:px-8 tablet:pb-24">
+      <!-- NAVBAR -->
+      <nav class="font-montserrat">
+        <div class="px-4">
+          <div class="flex justify-between mobile:flex mobile:justify-between mobile:items-center">
+            <div class="flex space-x-7">
+              <div>
+                <!-- Website Logo -->
+                <a href="#" class="flex items-center px-2 py-4">
+                  <img src="../img/logo.png" alt="Logo" class="h-8 mr-2" />
+                  <!-- <span class="text-lg font-semibold text-gray-500">Navigation</span> -->
+                </a>
+              </div>
+              <!-- Elementos principales del menú a la izquierda -->
+              <div class="items-center hidden space-x-1 tablet:flex">
+                <a href="index.html" class="px-2 py-2 font-semibold border-b border-ternary-light text-primary-light">Inicio</a>
+                <a href="#services" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold"
+                  >Servicios</a
+                >
+                <a href="#projects" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold"
+                  >Proyectos</a
+                >
+                <a href="#contact" class="px-2 py-2 text-gray-400 transition duration-300 hover:text-secondary-light hover:font-semibold">Contacto</a>
+              </div>
+            </div>
+            <!-- Secondary Navbar items -->
+            <div class="items-center hidden space-x-3 md:flex">
+              <a
+                href=""
+                class="px-2 py-2 text-gray-300 transition duration-300 rounded hover:bg-blue-400 hover:text-secondary-light focus:shadow-outline"
+                >Registro</a
+              >
+              <a href="" class="px-2 py-2 transition duration-300 bg-yellow-300 rounded text-primary-dark hover:bg-yellow-400 focus:shadow-outline"
+                >Entrar</a
+              >
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="flex items-center tablet:hidden">
+              <button class="outline-none mobile-menu-button">
+                <svg
+                  class="w-6 h-6 text-gray-300 hover:text-blue-400"
+                  x-show="!showMenu"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewbox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="z-30 hidden mobile-menu">
+          <ul class="">
+            <li class="active">
+              <a href="index.html" class="block px-2 py-4 text-sm font-semibold bg-blue-500 text-primary-light mobile-menu-link">Inicio</a>
+            </li>
+            <li>
+              <a href="#services" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light mobile-menu-link"
+                >Servicios</a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light mobile-menu-link"
+                >Proyectos</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="block px-2 py-4 text-sm transition duration-300 hover:bg-blue-500 text-secondary-light mobile-menu-link"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- NAVBAR ! -->
+      <!-- BANNER -->
+      <div class="items-center px-4 pt-6 tablet:flex">
+        <div class="t-6 tablet:w-1/3">
+          <span class="text-5xl text-yellow-300 iconify" data-icon="mdi:server"></span>
+          <h1 class="py-2 text-5xl font-semibold text-white font-montserrat">
+            Desarrollo <br />
+            Aplicaciones Web
+          </h1>
+          <p class="py-1 text-white">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae at natus dicta tempora? Distinctio vero aut, eveniet perferendis maiores
+            corporis.
+          </p>
+          <button class="px-2 py-2 mt-4 transition duration-300 bg-yellow-300 rounded text-primary-dark hover:bg-yellow-400 focus:shadow-outline">
+            Conócenos
+          </button>
+        </div>
+        <div class="items-center justify-center py-2 mt6 tablet:px-6 tablet:w-2/3">
+          <img src="../img/hero-image.png" alt="hero image" class="object-scale-down w-full h-96" />
+        </div>
+      </div>
+      <!-- BANNER ! -->
+    </section>
+    <!-- HERO ! -->
+
+    <!-- SERVICIOS -->
+    <section id="services" class="container p-4 mx-auto my-8 desktop:px-12">
+      <div class="text-center">
+        <h1 class="text-4xl font-semibold font-montserrat text-primary-dark dark:text-primary-light">Nuestros servicios</h1>
+        <h2 class="py-2 text-secondary-dark dark:text-secondary-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis</h2>
+      </div>
+      <!-- columnas de tarjetas. Voy a usar Grid por gusto, podría hacerlo con flex, aí probamos varias cosas -->
+      <div class="grid my-2 desktop:grid-cols-3 tablet:grid-cols-2">
+        <!-- Tarjeta 1 -->
+        <div class="m-2">
+          <div class="mb-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-secondary-dark hover:shadow-2xl">
+            <div class="px-6 py-8 sm:p-10 sm:pb-6">
+              <!-- Título -->
+              <div class="flex justify-center">
+                <span
+                  class="inline-flex px-4 py-1 text-sm font-semibold leading-5 tracking-wide uppercase rounded-full dark:text-white font-montserrat"
+                >
+                  Desarrollo Web
+                </span>
+              </div>
+              <div class="flex justify-center mt-2">
+                <span class="text-5xl text-gray-500 dark:text-gray-300 iconify" data-icon="fa-solid:file-code"></span>
+              </div>
+              <!-- Cuerpo -->
+              <div class="flex justify-center mt-4 text-6xl font-extrabold leading-none dark:text-white">
+                <span class="ml-1 mr-3 text-xl font-medium leading-8 text-gray-500 dark:text-gray-300"> desde </span>
+                100€
+                <span class="pt-8 ml-1 text-2xl font-medium leading-8 text-gray-500 dark:text-gray-300"> /mes </span>
+              </div>
+            </div>
+            <div class="px-6 pt-6 pb-8 sm:p-10 sm:pt-6">
+              <ul>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Lorem ipsum dolor est</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Tarifa plana</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Siempre disponible</p>
+                </li>
+              </ul>
+              <div class="flex items-center justify-center mt-6">
+                <button
+                  class="px-4 py-2 mb-1 mr-1 text-xs font-bold text-purple-500 uppercase transition-all duration-150 ease-linear bg-transparent border border-purple-300 border-solid rounded shadow outline-none hover:bg-purple-500 hover:text-white active:bg-purple-600 focus:outline-none dark:text-purple-300 dark:hover:text-white"
+                  type="button"
+                >
+                  Ver
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="m-2">
+          <div class="mb-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-secondary-dark hover:shadow-2xl">
+            <div class="px-6 py-8 sm:p-10 sm:pb-6">
+              <!-- Título -->
+              <div class="flex justify-center">
+                <span
+                  class="inline-flex px-4 py-1 text-sm font-semibold leading-5 tracking-wide uppercase rounded-full dark:text-white font-montserrat"
+                >
+                  Diseño Web
+                </span>
+              </div>
+              <div class="flex justify-center mt-2">
+                <span class="text-5xl text-gray-500 dark:text-gray-300 iconify" data-icon="ic:baseline-design-services"></span>
+              </div>
+              <!-- Cuerpo -->
+              <div class="flex justify-center mt-4 text-6xl font-extrabold leading-none dark:text-white">
+                <span class="ml-1 mr-3 text-xl font-medium leading-8 text-gray-500 dark:text-gray-300"> desde </span>
+                70€
+                <span class="pt-8 ml-1 text-2xl font-medium leading-8 text-gray-500 dark:text-gray-300"> /mes </span>
+              </div>
+            </div>
+            <div class="px-6 pt-6 pb-8 sm:p-10 sm:pt-6">
+              <ul>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Lorem ipsum dolor est</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Tarifa plana</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Siempre disponible</p>
+                </li>
+              </ul>
+              <div class="flex items-center justify-center mt-6">
+                <button
+                  class="px-4 py-2 mb-1 mr-1 text-xs font-bold text-purple-500 uppercase transition-all duration-150 ease-linear bg-transparent border border-purple-300 border-solid rounded shadow outline-none hover:bg-purple-500 hover:text-white active:bg-purple-600 focus:outline-none dark:text-purple-300 dark:hover:text-white"
+                  type="button"
+                >
+                  Ver
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 3 -->
+        <div class="m-2">
+          <div class="mb-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-secondary-dark hover:shadow-2xl">
+            <div class="px-6 py-8 sm:p-10 sm:pb-6">
+              <!-- Título -->
+              <div class="flex justify-center">
+                <span
+                  class="inline-flex px-4 py-1 text-sm font-semibold leading-5 tracking-wide uppercase rounded-full dark:text-white font-montserrat"
+                >
+                  Web Hosting
+                </span>
+              </div>
+              <div class="flex justify-center mt-2">
+                <span class="text-5xl text-gray-500 dark:text-gray-300 iconify" data-icon="whh:sharedhosting"></span>
+              </div>
+              <!-- Cuerpo -->
+              <div class="flex justify-center mt-4 text-6xl font-extrabold leading-none dark:text-white">
+                <span class="ml-1 mr-3 text-xl font-medium leading-8 text-gray-500 dark:text-gray-300"> desde </span>
+                150€
+                <span class="pt-8 ml-1 text-2xl font-medium leading-8 text-gray-500 dark:text-gray-300"> /mes </span>
+              </div>
+            </div>
+            <div class="px-6 pt-6 pb-8 sm:p-10 sm:pt-6">
+              <ul>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Lorem ipsum dolor est</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Tarifa plana</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Siempre disponible</p>
+                </li>
+              </ul>
+              <div class="flex items-center justify-center mt-6">
+                <button
+                  class="px-4 py-2 mb-1 mr-1 text-xs font-bold text-purple-500 uppercase transition-all duration-150 ease-linear bg-transparent border border-purple-300 border-solid rounded shadow outline-none hover:bg-purple-500 hover:text-white active:bg-purple-600 focus:outline-none dark:text-purple-300 dark:hover:text-white"
+                  type="button"
+                >
+                  Ver
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 4 -->
+        <div class="m-2">
+          <div class="mb-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-secondary-dark hover:shadow-2xl">
+            <div class="px-6 py-8 sm:p-10 sm:pb-6">
+              <!-- Título -->
+              <div class="flex justify-center">
+                <span
+                  class="inline-flex px-4 py-1 text-sm font-semibold leading-5 tracking-wide uppercase rounded-full dark:text-white font-montserrat"
+                >
+                  App Móviles
+                </span>
+              </div>
+              <div class="flex justify-center mt-2">
+                <span class="text-5xl text-gray-500 dark:text-gray-300 iconify" data-icon="zondicons:mobile-devices"></span>
+              </div>
+              <!-- Cuerpo -->
+              <div class="flex justify-center mt-4 text-6xl font-extrabold leading-none dark:text-white">
+                <span class="ml-1 mr-3 text-xl font-medium leading-8 text-gray-500 dark:text-gray-300"> desde </span>
+                80€
+                <span class="pt-8 ml-1 text-2xl font-medium leading-8 text-gray-500 dark:text-gray-300"> /mes </span>
+              </div>
+            </div>
+            <div class="px-6 pt-6 pb-8 sm:p-10 sm:pt-6">
+              <ul>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Lorem ipsum dolor est</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Tarifa plana</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Siempre disponible</p>
+                </li>
+              </ul>
+              <div class="flex items-center justify-center mt-6">
+                <button
+                  class="px-4 py-2 mb-1 mr-1 text-xs font-bold text-purple-500 uppercase transition-all duration-150 ease-linear bg-transparent border border-purple-300 border-solid rounded shadow outline-none hover:bg-purple-500 hover:text-white active:bg-purple-600 focus:outline-none dark:text-purple-300 dark:hover:text-white"
+                  type="button"
+                >
+                  Ver
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 5 -->
+        <div class="m-2">
+          <div class="mb-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-secondary-dark hover:shadow-2xl">
+            <div class="px-6 py-8 sm:p-10 sm:pb-6">
+              <!-- Título -->
+              <div class="flex justify-center">
+                <span
+                  class="inline-flex px-4 py-1 text-sm font-semibold leading-5 tracking-wide uppercase rounded-full dark:text-white font-montserrat"
+                >
+                  Mejoras SEO
+                </span>
+              </div>
+              <div class="flex justify-center mt-2">
+                <span class="text-5xl text-gray-500 dark:text-gray-300 iconify" data-icon="ic:baseline-query-stats"></span>
+              </div>
+              <!-- Cuerpo -->
+              <div class="flex justify-center mt-4 text-6xl font-extrabold leading-none dark:text-white">
+                <span class="ml-1 mr-3 text-xl font-medium leading-8 text-gray-500 dark:text-gray-300"> desde </span>
+                50€
+                <span class="pt-8 ml-1 text-2xl font-medium leading-8 text-gray-500 dark:text-gray-300"> /mes </span>
+              </div>
+            </div>
+            <div class="px-6 pt-6 pb-8 sm:p-10 sm:pt-6">
+              <ul>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Lorem ipsum dolor est</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Tarifa plana</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Siempre disponible</p>
+                </li>
+              </ul>
+              <div class="flex items-center justify-center mt-6">
+                <button
+                  class="px-4 py-2 mb-1 mr-1 text-xs font-bold text-purple-500 uppercase transition-all duration-150 ease-linear bg-transparent border border-purple-300 border-solid rounded shadow outline-none hover:bg-purple-500 hover:text-white active:bg-purple-600 focus:outline-none dark:text-purple-300 dark:hover:text-white"
+                  type="button"
+                >
+                  Ver
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tarjeta 6 -->
+        <div class="m-2">
+          <div class="mb-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-secondary-dark hover:shadow-2xl">
+            <div class="px-6 py-8 sm:p-10 sm:pb-6">
+              <!-- Título -->
+              <div class="flex justify-center">
+                <span
+                  class="inline-flex px-4 py-1 text-sm font-semibold leading-5 tracking-wide uppercase rounded-full dark:text-white font-montserrat"
+                >
+                  Marketing
+                </span>
+              </div>
+              <div class="flex justify-center mt-2">
+                <span class="text-5xl text-gray-500 dark:text-gray-300 iconify" data-icon="ph:shopping-bag-open-fill"></span>
+              </div>
+              <!-- Cuerpo -->
+              <div class="flex justify-center mt-4 text-6xl font-extrabold leading-none dark:text-white">
+                <span class="ml-1 mr-3 text-xl font-medium leading-8 text-gray-500 dark:text-gray-300"> desde </span>
+                100€
+                <span class="pt-8 ml-1 text-2xl font-medium leading-8 text-gray-500 dark:text-gray-300"> /mes </span>
+              </div>
+            </div>
+            <div class="px-6 pt-6 pb-8 sm:p-10 sm:pt-6">
+              <ul>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Lorem ipsum dolor est</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Tarifa plana</p>
+                </li>
+                <li class="flex items-start mt-4">
+                  <div class="flex-shrink-0">
+                    <svg class="w-6 h-6 text-green-500" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                  <p class="ml-3 text-base leading-6 text-gray-700 dark:text-gray-200">Siempre disponible</p>
+                </li>
+              </ul>
+              <div class="flex items-center justify-center mt-6">
+                <button
+                  class="px-4 py-2 mb-1 mr-1 text-xs font-bold text-purple-500 uppercase transition-all duration-150 ease-linear bg-transparent border border-purple-300 border-solid rounded shadow outline-none hover:bg-purple-500 hover:text-white active:bg-purple-600 focus:outline-none dark:text-purple-300 dark:hover:text-white"
+                  type="button"
+                >
+                  Ver
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center py-2">
+        <button class="px-2 py-2 m-4 transition duration-300 bg-yellow-300 rounded text-primary-dark hover:bg-yellow-400 focus:shadow-outline">
+          Consulta gratuita
+        </button>
+        <button class="px-2 py-2 m-4 transition duration-300 bg-blue-500 rounded text-primary-light hover:bg-blue-600 focus:shadow-outline">
+          Pide presupuesto
+        </button>
+      </div>
+    </section>
+    <!-- SERVICIOS ! -->
+
+    <!-- PROYECTOS -->
+    <section id="projects" class="container p-4 mx-auto my-8 desktop:px-12">
+      <div class="text-center">
+        <h1 class="text-4xl font-semibold font-montserrat text-primary-dark dark:text-primary-light">Proyectos realizados</h1>
+        <h2 class="py-2 text-secondary-dark dark:text-secondary-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis</h2>
+      </div>
+      <!-- Slider -->
+      <div class="mt-4 blog-slider__container">
+        <div class="shadow-sd blogSlides fade">
+          <div class="blog-slider__numbertext text-secondary-dark">1 / 3</div>
+          <img src="../img/project01.png" />
+          <div class="font-semibold text-gray-600 bg-white blog-slider__text font-montserrat">Coder Web</div>
+        </div>
+
+        <div class="blogSlides fade">
+          <div class="blog-slider__numbertext text-secondary-dark">2 / 3</div>
+          <img src="../img/project02.png" />
+          <div class="font-semibold text-gray-600 bg-white blog-slider__text font-montserrat">Any Face</div>
+        </div>
+
+        <div class="blogSlides fade">
+          <div class="blog-slider__numbertext text-secondary-dark">3 / 3</div>
+          <img src="../img/project03.jpeg" />
+          <div class="font-semibold text-gray-600 bg-white blog-slider__text font-montserrat">F0lio</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+      <div class="blogSlider__dots" style="text-align: center">
+        <span class="blogSlider__dots--dot" onclick="currentSlide(1)"></span>
+        <span class="blogSlider__dots--dot" onclick="currentSlide(2)"></span>
+        <span class="blogSlider__dots--dot" onclick="currentSlide(3)"></span>
+      </div>
+      <!-- Nuestro equipo -->
+      <div class="mt-8 text-center">
+        <h1 class="text-4xl font-semibold font-montserrat text-primary-dark dark:text-primary-light">Nuestro equipo</h1>
+        <h2 class="py-2 text-secondary-dark dark:text-secondary-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis</h2>
+      </div>
+      <!-- Foto -->
+      <div class="relative p-4 mt-20">
+        <div class="absolute mb-4 text-center transform translate-x-1/2 -top-16 right-1/2">
+          <a href="#" class="relative block">
+            <img
+              alt="profil"
+              src="https://avatars.githubusercontent.com/u/47913953?v=4"
+              class="object-cover w-40 h-40 mx-auto border-2 rounded-lg bg-secondary-light dark:bg-secondary-dark"
+            />
+          </a>
+        </div>
+        <div class="px-8 py-4 pt-24 bg-white rounded-lg shadow dark:bg-secondary-dark">
+          <div class="text-center">
+            <p class="text-2xl font-semibold text-primary-dark dark:text-primary-light font-montserrat">JoseLuisGS</p>
+            <p class="text-xl font-light text-secondary-dark dark:text-secondary-light">Lead dev</p>
+            <p class="py-4 mx-auto font-light text-gray-500 text-md w-60 dark:text-gray-400">
+              JoseLuisGS Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, nam?.
+            </p>
+          </div>
+          <div class="flex items-center justify-between w-40 pt-8 mx-auto text-gray-500 border-t border-gray-200">
+            <a href="https://twitter.com/joseluisgonsan" target="_blank">
+              <span
+                fill="currentColor"
+                class="text-3xl transition-colors duration-200 hover:text-gray-800 dark:hover:text-white iconify"
+                data-icon="fe:twitter"
+              ></span>
+            </a>
+            <a href="https://github.com/joseluisgs" target="_blank">
+              <span
+                fill="currentColor"
+                class="text-3xl transition-colors duration-200 hover:text-gray-800 dark:hover:text-white iconify"
+                data-icon="fe:github"
+              ></span>
+            </a>
+            <a href="https://www.linkedin.com/in/joseluisgonsan/" target="_blank">
+              <span
+                fill="currentColor"
+                class="text-3xl transition-colors duration-200 hover:text-gray-800 dark:hover:text-white iconify"
+                data-icon="mdi:linkedin"
+              ></span>
+            </a>
+            <a href="https://joseluisgs.github.io" target="_blank">
+              <span
+                fill="currentColor"
+                class="text-3xl transition-colors duration-200 hover:text-gray-800 dark:hover:text-white iconify"
+                data-icon="gg:website"
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- PROYECTOS ! -->
+
+    <!-- CONTACTO -->
+    <section id="contact" class="p-4 mx-auto mt-8 desktop:px-12">
+      <!-- <div class="text-center">
+        <h1 class="text-4xl font-semibold font-montserrat text-primary-light">Contacto</h1>
+        <h2 class="py-2 text-secondary-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis</h2>
+      </div> -->
+      <div class="grid my-2 desktop:grid-cols-2">
+        <!-- Formulario -->
+        <div class="rounded-md shadow-md bg-ternary-light">
+          <div class="px-5 py-3 font-semibold bg-yellow-300 rounded-t-md font-montserrat">Contacta con nosotros</div>
+
+          <div class="p-5">
+            <form>
+              <div class="p-2">
+                <label for="name" class="text-primary-dark">Nombre</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+                  name="name"
+                  required
+                  placeholder="Nombre completo"
+                />
+              </div>
+              <div class="p-2">
+                <label for="phone" class="text-primary-dark">Teléfono</label>
+                <input
+                  type="text"
+                  id="phone"
+                  class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+                  name="phone"
+                  required
+                  placeholder="Teléfono"
+                />
+              </div>
+              <div class="p-2">
+                <label for="email" class="text-primary-dark">E-Mail</label>
+                <input
+                  type="text"
+                  id="email"
+                  class="flex-1 w-full px-4 py-2 text-base text-gray-700 placeholder-gray-400 bg-white border border-transparent border-gray-300 rounded-lg shadow-sm appearance-none focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+                  name="email"
+                  required
+                  placeholder="tu-correo@email.com"
+                />
+              </div>
+              <div class="p-2 text-center">
+                <input
+                  type="submit"
+                  class="w-1/3 px-2 py-2 mt-2 duration-300 bg-yellow-300 rounded mtransition text-primary-dark hover:bg-yellow-400 focus:shadow-outline hover:cursor-pointer"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Comentarios -->
+        <div class="p-6 pt-6">
+          <div class="flex justify-start my-3 b-4">
+            <span class="text-5xl iconify text-primary-light" data-icon="mdi:format-quote-open"></span>
+          </div>
+          <!-- Media -->
+          <div class="items-center tablet:flex">
+            <div class="justify-center py-2 align-middle tablet:w-1/3 tablet:justify-self-start">
+              <img src="../img/testimonial.png" class="object-scale-down w-full h-32" />
+            </div>
+            <div class="align-middle tablet:w-2/3 tablet:justify-self-start text-primary-light">
+              <p class="py-2 font-semibold font-montserrat">
+                John Doe
+                <small class="font-sans text-sm font-normal"> @john.doe 31 min.</small>
+              </p>
+
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor nisi deserunt nostrum adipisci minima beatae reprehenderit numquam
+                tempore amet, accusantium aspernatur necessitatibus, sapiente in quod saepe. Provident veniam minima eius.
+              </p>
+            </div>
+          </div>
+          <div class="flex justify-end pt-4 my-3">
+            <span class="text-5xl iconify text-primary-light" data-icon="mdi:format-quote-close"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACTO ! -->
+
+    <!-- FOOTER -->
+    <footer class="p-4 text-center text-gray-300">
+      <p>
+        <small>
+          <p class="inline-flex">
+            Coding with 
+            <div class="inline-flex pl-2 text-red-500">
+              <span class="iconify" data-icon="mdi:heart-multiple"></span>
+            </div> 
+            &copy;
+            <a href="http://github.com/joseluisgs" target="_blank" class="hover:cursor-pointer hover:text-gray-50 hover:font-semibold">José Luis González Sánchez</a>. 2021
+          </p>
+        </small>
+      </p>
+      <p class="pt-2">
+        <small class="inline-flex">
+           <a href="https://twitter.com/joseluisgonsan" target="_blank" class="px-1">
+               <span
+                class="text-sm text-blue-400 transition-colors duration-200 hover:text-blue-600 iconify"
+                data-icon="fe:twitter"
+              ></span>
+            </a>
+            <a href="https://github.com/joseluisgs" target="_blank" class="px-1">
+               <span
+                class="text-sm text-gray-300 transition-colors duration-200 hover:text-gray-500 iconify"
+                data-icon="fe:github"
+              ></span>
+            </a>
+            <a href="https://www.linkedin.com/in/joseluisgonsan/" target="_blank" class="px-1">
+               <span
+                class="text-sm text-blue-500 transition-colors duration-200 hover:text-blue-700 iconify"
+                data-icon="mdi:linkedin"
+              ></span>
+            </a>
+            <a href="https://www.linkedin.com/in/joseluisgonsan/" target="_blank" class="px-1">
+               <span
+                class="text-sm text-gray-200 transition-colors duration-200 hover:text-gray-400 iconify"
+                data-icon="gg:website"
+              ></span>
+            </a>
+        </small>
+      </p>
+    </footer>
+    <!-- FOOTER ! -->
+
+    <!-- SCRIPTS Y LIBRERÍAS -->
+    <!-- ICONIFY: lo he descargado en libs -->
+    <!-- <script async src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script> -->
+
+    <!-- BACK TO TOP: Lo he descargado en libs -->
+    <!-- <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script> -->
+
+    <!-- MIS SCRIPTS -->
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
